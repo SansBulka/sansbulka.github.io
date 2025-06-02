@@ -1,0 +1,591 @@
+@import url(/footer/style.css);
+
+@import url(/navbar/style.css);
+
+*,body {
+    margin: 0;
+    padding: 0
+}
+
+* {
+    box-sizing: border-box;
+    font-family: poppins,sans-serif;
+    font-weight: 300
+}
+
+body {
+    background-color: #f8f8f8;
+    color: #2e2e2e;
+    font-family: "Segoe UI",Tahoma,Geneva,Verdana,sans-serif;
+    width: 100vw
+}
+
+h2 {
+    color: #1a1a1a;
+    font-size: 1.75rem;
+    margin-bottom: 1rem
+}
+
+h3 {
+    color: #000;
+    font-size: clamp(1.5rem,3vw,2rem);
+    text-transform: uppercase
+}
+
+h4 {
+    font-size: clamp(1rem,1.5vw,2.5rem)
+}
+
+h2,h3,h4,strong {
+    font-weight: 600
+}
+
+main {
+    display: flex;
+    gap: 5vw;
+    justify-content: center;
+    padding: 2rem 5%
+}
+
+.images,.images>div {
+    display: flex;
+    gap: 15px
+}
+
+.images {
+    flex-direction: column;
+    width: 35vw
+}
+
+.images>img {
+    border: #c5c5c5 solid 1px;
+    width: 100%
+}
+
+.images>div {
+    width: 100%
+}
+
+.images>div>img {
+    border: #c5c5c5 solid 1px;
+    width: calc(50% - 7.5px)
+}
+
+.nyga {
+    margin-top: 10vh;
+    width: 35vw
+}
+
+.nyga>h2,.nyga>h3 {
+    border-bottom: #c5c5c5 solid 1px;
+    padding-bottom: 12px
+}
+
+.nyga>h2 {
+    margin-bottom: 24px
+}
+
+.nyga>h3 {
+    font-size: clamp(1rem,1.5vw,1.2rem);
+    font-weight: 600;
+    margin-top: 48px;
+    padding-left: 12px;
+    text-transform: initial
+}
+
+.nyga>a {
+    background-color: #c5c5c5;
+    border: 0;
+    border-radius: .5em;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    padding: 1em 2em
+}
+
+.cost,.cost>div {
+    align-items: center;
+    display: flex
+}
+
+.cost {
+    border: #000 solid 1px;
+    border-radius: 12px;
+    height: 15vh;
+    justify-content: space-around;
+    padding: 5em 0
+}
+
+.cost>div {
+    flex-direction: column;
+    justify-content: center
+}
+
+.cost>div>div {
+    margin: 12px 0
+}
+
+.cost>div>div>p,.nyga>a {
+    font-size: 14px
+}
+
+.price {
+    font-size: 24px;
+    font-weight: 600
+}
+
+.og-price {
+    font-size: 14px;
+    text-decoration: line-through
+}
+
+.add>div,.flex {
+    align-items: center;
+    display: flex
+}
+
+.flex {
+    justify-content: flex-start;
+    width: 100%
+}
+
+.add>div {
+    justify-content: center
+}
+
+.add>div:nth-of-type(1) {
+    border-right: #858585 solid 1px;
+    height: min-content;
+    width: 3vw
+}
+
+.add>div:nth-of-type(2) {
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    width: 6vw
+}
+
+.add>div:nth-of-type(3) {
+    border-left: #858585 solid 1px;
+    height: min-content;
+    width: 3vw
+}
+
+.drop-down {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: max-height .5s ease-out,padding .3s ease-out
+}
+
+.drop-down.active {
+    padding: 15px
+}
+
+.dropdown-arrow {
+    align-items: center;
+    display: inline-flex;
+    float: right;
+    transition: transform .3s
+}
+
+.dropdown-arrow.active {
+    transform: rotate(180deg)
+}
+
+table {
+    border-collapse: collapse;
+    margin: 20px auto;
+    width: 100%
+}
+
+td,th {
+    padding: 10px;
+    text-align: left
+}
+
+tr:nth-child(odd) {
+    background-color: #d6d6d6
+}
+
+tr:nth-child(even) {
+    background-color: #fff
+}
+
+th {
+    background-color: #ddd
+}
+
+.image-row td {
+    text-align: left
+}
+
+.nyga ul li,ul {
+    padding-left: 20px
+}
+
+ul {
+    list-style-type: none
+}
+
+.nyga ul li {
+    margin-bottom: 10px;
+    position: relative
+}
+
+ul li::before {
+    background-color: #d71119;
+    content: "";
+    height: 8px;
+    left: 0;
+    position: absolute;
+    top: 7px;
+    width: 8px
+}
+
+.polecane-produkty {
+    margin: 48px 0;
+    padding: 20px;
+    position: relative;
+    width: 100%
+}
+
+.polecane-produkty h3 {
+    color: #1a1a1a;
+    font-size: clamp(1.5rem,3vw,2rem);
+    font-weight: 300;
+    letter-spacing: 6px;
+    margin-bottom: 32px;
+    text-align: center;
+    text-transform: uppercase
+}
+
+.polecane-produkty-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    width: 100%
+}
+
+.polecane-produkty-container::-webkit-scrollbar {
+    display: none
+}
+
+.polecane-produkty-container .product-card {
+    background: #fff;
+    border: 2px solid #c5c5c5;
+    border-radius: 8px;
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 300px;
+    min-height: 380px;
+    padding: 1rem;
+    text-align: center;
+    width: 22%
+}
+
+.polecane-produkty-container .product-card>img {
+    height: auto;
+    margin-bottom: 10px;
+    max-width: 100%;
+    object-fit: contain;
+    width: 100%
+}
+
+.polecane-produkty-container .product-title {
+    font-weight: 500;
+    margin-top: 10px
+}
+
+.polecane-produkty-container .og-price {
+    align-items: center;
+    color: #858585;
+    display: flex;
+    font-size: .75rem;
+    gap: 4px;
+    justify-content: center;
+    text-decoration: line-through
+}
+
+.polecane-produkty-container .price p {
+    font-size: 1.1rem;
+    font-weight: 600
+}
+
+.polecane-produkty-container .btn {
+    background-color: #c5c5c5;
+    border: 0;
+    border-radius: 8px;
+    color: #000;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: .5rem 1rem
+}
+
+.polecane-produkty-container .btn:hover {
+    background-color: #d71119;
+    color: #fff
+}
+
+.informacja {
+    width: 20px
+}
+
+.product-arrow {
+    cursor: pointer;
+    display: flex;
+    filter: brightness(0);
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: border-color .3s;
+    width: 24px;
+    z-index: 10
+}
+
+.product-arrow>img {
+    height: 100%;
+    width: 100%
+}
+
+.product-arrow:hover {
+    border-color: #d71119
+}
+
+.product-arrow:hover .arrow-icon {
+    filter: invert(14%) sepia(83%) saturate(4468%) hue-rotate(343deg) brightness(91%) contrast(95%)
+}
+
+.product-arrow.left {
+    left: 30px
+}
+
+.product-arrow.right {
+    right: 30px
+}
+
+.arrow-icon {
+    height: 16px;
+    width: 16px
+}
+
+.left-arrow {
+    transform: rotate(180deg)
+}
+
+@media (max-width:1024px) {
+    main {
+        align-items: center;
+        gap: 2rem
+    }
+
+    .images,.nyga {
+        width: 90%;
+        margin-top: 2vh
+    }
+
+    .cost,main {
+        flex-direction: column
+    }
+
+    .cost {
+        height: auto;
+        padding: 2em 1em;
+        gap: 1em
+    }
+
+    .add,.cost button {
+        width: 80%
+    }
+
+    .add>div:nth-of-type(1),.add>div:nth-of-type(3) {
+        width: 20%
+    }
+
+    .add>div:nth-of-type(2) {
+        width: 60%
+    }
+}
+
+@media (max-width:768px) {
+    main,section {
+        padding: 1rem
+    }
+
+    .polecane-produkty-container .product-card {
+        width: 80%;
+        min-width: 250px
+    }
+
+    .product-arrow.left {
+        left: 10px
+    }
+
+    .product-arrow.right {
+        right: 10px
+    }
+
+    table {
+        font-size: 14px
+    }
+
+    .image-row img {
+        width: 100%;
+        max-width: 250px
+    }
+
+    .polecane-produkty h3 {
+        letter-spacing: 2px
+    }
+}
+
+@media (max-width:480px) {
+    .polecane-produkty-container .product-card {
+        width: 90%;
+        min-height: 320px
+    }
+
+    .nyga>h3 {
+        font-size: 1rem
+    }
+
+    .cost>div>div>p,.nyga button {
+        font-size: 12px
+    }
+
+    .price {
+        font-size: 20px
+    }
+}
+
+.add,.box,.cost button {
+    align-items: center;
+    display: flex
+}
+
+.box {
+    flex-direction: column;
+    gap: 15px
+}
+
+.add,.cost button {
+    border-radius: 8px;
+    height: 48px;
+    width: 10vw;
+    min-width: 120px
+}
+
+.cost button {
+    background-color: #d71119;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: clamp(.5rem,.8vw,.7rem);
+    font-weight: 600;
+    justify-content: space-around;
+    padding: 0 15px
+}
+
+.cost button img {
+    height: 18px;
+    width: 18px;
+    margin-right: 5px
+}
+
+.add {
+    background-color: #c5c5c5
+}
+
+@media (max-width:1024px) {
+    .box {
+        flex-direction: column;
+        width: 100%
+    }
+
+    .add,.cost button {
+        width: 80%;
+        max-width: 300px
+    }
+}
+
+@media (max-width:768px) {
+    .cost {
+        gap: 20px
+    }
+
+    .cost button {
+        font-size: .9rem;
+        height: 50px
+    }
+
+    .add {
+        height: 50px
+    }
+
+    .add p {
+        font-size: 1.2rem
+    }
+}
+
+@media (max-width:480px) {
+    .box {
+        padding: 0 10px
+    }
+
+    .add,.cost button {
+        width: 100%
+    }
+
+    .cost button img {
+        height: 16px;
+        width: 16px
+    }
+}
+
+.btn {
+    text-decoration: none
+}
+.links {
+    display: flex;
+    height: 13vh;
+    align-items: flex-end;
+    margin-left: 10%
+}
+
+.links>a {
+    text-decoration: none;
+    color: #000;
+    font-size: .8rem;
+    margin: 0 1%
+}
+
+a.gray {
+    color: #858585
+}
+
+p {
+    font-size: 16px
+}
+.links>p{
+    height: 22px;
+}
+.nyga a{
+    width: fit-content;
+    color: black;
+    text-decoration: none;
+
+}
+.nyga a:hover {
+    background-color: #d71119;
+    color: white;
+}

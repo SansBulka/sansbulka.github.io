@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="A simple HTML document">
+    <meta name="keywords" content="nusz">
+    <meta name="author" content="Kamil Pogonowski">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/src/ico/icon.png" type="image/png">
+    <title>Sekiryu profesjonalne japońskie noże kuchenne</title>
+</head>
+<body>
+<nav>
+    <script>
+        fetch("/navbar/index.html")
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector("nav").innerHTML = data;
+                if (window.initHamburgerMenu) window.initHamburgerMenu();
+            });
+    </script>
+</nav>
+<main>
+    <div class="links">
+        <a class="gray" href="/">Strona główna</a><p> > </p><a href="/regulamin">Regulamin</a>
+    </div>
+<h3>Regulamin</h3>
+    <section>
+        <h4>I.  Definicje</h4><br>
+        <p>Użyte w Regulaminie pojęcia oznaczają:<br><br>
+
+            1. Klient – osoba fizyczna, osoba prawna lub jednostka organizacyjna niebędąca osobą prawną, której przepisy szczególne przyznają zdolność prawną, która dokonuje Zamówie nia w ramach Sklepu;<br>
+            2. Konsument – zgodnie z art. 22[1] Kodeksu Cywilnego oznacza osobę fizyczną dokonującą z przedsiębiorcą czynności prawnej niezwiązanej
+            bezpośrednio z jej działalnością gospodarczą lub zawodową.<br>
+            3. Kodeks Cywilny – ustawa z dnia 23 kwietnia 1964 r. (Dz.U. Nr 16, poz. 93 ze zm.);<br>
+            4. Regulamin – niniejszy Regulamin świadczenia usług drogą elektroniczną w ramach sklepu internetowego;<br>
+            5. Sklep internetowy (Sklep) – serwis internetowy dostępny pod Niemchem.com, za pośrednictwem którego Klient może w szczególności składać Zamówienia;<br>
+            6. Towar – produkty prezentowane w Sklepie Internetowym;<br>
+            7. Umowa sprzedaży – umowa sprzedaży Towarów w rozumieniu Kodeksu Cywilnego, zawarta pomiędzy;<br>
+            8. Ustawa o prawach konsumenta – ustawa z dnia 30 maja 2014 r. o prawach konsumenta (Dz.U. z 2014 r. poz. 827);<br>
+            9. Ustawa o świadczeniu usług drogą elektroniczną – ustawa z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną (Dz. U. Nr 144, poz. 1204 ze   zm.);<br>
+            10. RODO – Rozporządzenie Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych  i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych).<br>
+            11. Zamówienie – oświadczenie woli Klienta, zmierzające bezpośrednio do zawarcia Umowy sprzedaży, określające w szczególności rodzaj i liczbę Towaru.<br><br><br>
+
+        </p>
+    </section>
+    <section>
+        <h4>II. Postanowienia ogólne</h4><br>
+        <p>2.1.	Niniejszy Regulamin określa zasady korzystania ze sklepu internetowego dostępnego pod adresem: [adres strony internetowej].<br>
+            2.2.	Niniejszy Regulamin jest regulaminem, o którym mowa w art. 8 Ustawy o świadczeniu usług drogą elektroniczną.<br>
+            2.3.	Sklep internetowy, działający pod adresem: prowadzony jest przez<br>
+
+            2.4.	Niniejszy Regulamin określa w szczególności:<br>
+            a)  zasady dokonywania rejestracji i korzystania z konta w ramach sklepu internetowego;<br>
+            b)  warunki i zasady składania drogą elektroniczną Zamówień w ramach sklepu internetowego;<br>
+            c)  zasady zawierania Umów sprzedaży z wykorzystaniem usług świadczonych w ramach sklepu Internetowego.<br>
+
+            2.5.	Korzystanie ze sklepu internetowego jest możliwe pod warunkiem spełnienia przez system teleinformatyczny, z którego korzysta Klient następujących minimalnych wymagań technicznych:<br>
+            a)  Internet Explorer w wersji 9.0 lub nowszej lub<br>
+            b)  dowolnej innej przeglądarki kompatybilnej z w.w.<br>
+
+            2.6.	W celu korzystania ze sklepu internetowego Klient powinien we własnym zakresie uzyskać dostęp do stanowiska komputerowego lub urządzenia końcowego z dostępem do Internetu.<br>
+            2.7.	Zgodnie z obowiązującymi przepisami prawa chemicon.pl zastrzega sobie możliwość ograniczenia świadczenia usług za pośrednictwem Sklepu internetowego do osób, które ukończyły wiek 18 lat. W takim przypadku potencjalni Klienci zostaną o powyższym powiadomieni.<br>
+            2.8.	Klienci mogą uzyskać dostęp do niniejszego Regulaminu w każdym czasie za pośrednictwem odsyłacza zamieszczonego na stronie głównej serwisu oraz pobrać go i sporządzić jego wydruk.<br>
+
+
+
+        </p>
+    </section>
+</main>
+<footer>
+    <script>
+        fetch("/footer/index.html")
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector("footer").innerHTML = data;
+                document.querySelector("footer").style.backgroundImage = 'linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)), url("/src/img/foot.png")';
+            });
+    </script>
+</footer>
+</body>
+<script src="/scripts/details.js"></script>
+<script src="/scripts/hamMenu.js"></script>
+<script src="/scripts/footer.js"></script>
+</html>

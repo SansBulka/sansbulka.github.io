@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="A simple HTML document">
+    <meta name="keywords" content="nusz">
+    <meta name="author" content="Kamil Pogonowski">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/src/ico/icon.png" type="image/png">
+    <title>Sekiryu profesjonalne japońskie noże kuchenne</title>
+</head>
+<body>
+<nav>
+    <script>
+        fetch("/navbar/index.html")
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector("nav").innerHTML = data;
+                if (window.initHamburgerMenu) window.initHamburgerMenu();
+            });
+    </script>
+</nav>
+<div class="links">
+    <a class="gray" href="/">Strona główna</a><p> > </p><a href="/aktualnosci">Aktualności</a>
+</div>
+<main>
+    <h2>Aktualności</h2>
+    <div class="container">
+        <section class="lewa">
+            <article>
+                <div class="image"><div class="crazy"><span>20.05.2024</span></div><img src="/src/img/aktualnosci/szlyp.png" alt="goon"></div>
+                <div class="teksto">
+                    <h3>Lorem ipsum dolor sit amet consectetur turpis nisi nullam at aliquam lectus</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur. Lorem et orci nulla porttitor feugiat. Mauris diam ut sem gravida. Auctor libero diam sed massa volutpat donec mattis enim in. Egestas pellentesque sit diam donec enim hac. Ipsum euismod dapibus ut ut. Mi pulvinar quis tincidunt eget ut dolor arcu pulvinar.
+                    </p>
+                </div>
+                <a href="/article" class="btn-link">zobacz więcej</a>
+            </article>
+            <article>
+                <div class="image"><div class="crazy"><span>20.05.2024</span></div><img src="/src/img/article.webp" alt="goon"></div>
+                <div class="teksto">
+                    <h3>Lorem ipsum dolor sit amet consectetur turpis nisi nullam at aliquam lectus</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur. Lorem et orci nulla porttitor feugiat. Mauris diam ut sem gravida. Auctor libero diam sed massa volutpat donec mattis enim in. Egestas pellentesque sit diam donec enim hac. Ipsum euismod dapibus ut ut. Mi pulvinar quis tincidunt eget ut dolor arcu pulvinar.
+                    </p>
+                </div>
+                <a href="/article" class="btn-link">zobacz więcej</a>
+            </article>
+        </section>
+        <section class="prawa">
+            <article>
+                <div class="teksto">
+                    <h3>Lorem ipsum dolor sit amet consectetur turpis nisi nullam at aliquam lectus</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur. Lorem et orci nulla porttitor feugiat. Mauris diam ut sem gravida. Auctor libero diam sed massa volutpat donec mattis enim in. Egestas pellentesque sit diam donec enim hac. Ipsum euismod dapibus ut ut. Mi pulvinar quis tincidunt eget ut dolor arcu pulvinar.
+                    </p>
+                </div>
+                <a href="/article" class="btn-link">zobacz więcej</a>
+                <div class="image"><div class="crazy"><span>20.05.2024</span></div><img src="/src/img/article3.webp" alt="goon"></div>
+            </article>
+            <article>
+                <div class="teksto">
+                    <h3>Lorem ipsum dolor sit amet consectetur turpis nisi nullam at aliquam lectus</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur. Lorem et orci nulla porttitor feugiat. Mauris diam ut sem gravida. Auctor libero diam sed massa volutpat donec mattis enim in. Egestas pellentesque sit diam donec enim hac. Ipsum euismod dapibus ut ut. Mi pulvinar quis tincidunt eget ut dolor arcu pulvinar.
+                    </p>
+                </div>
+                <a href="/article" class="btn-link">zobacz więcej</a>
+                <div class="image"><div class="crazy"><span>20.05.2024</span></div><img src="/src/img/article4.webp" alt="goon"></div>
+            </article>
+
+        </section>
+    </div>
+    <div class="pagination">
+        <img src="/src/ico/arrow.svg" alt="poprzednia" class="arrow prev">
+        <span>01</span>
+        <span>02</span>
+        <span class="current">03</span>
+        <span>04</span>
+        <span>05</span>
+        <span>...</span>
+        <span>10</span>
+        <span>11</span>
+        <span>12</span>
+        <span>13</span>
+        <img src="/src/ico/arrow.svg" alt="następna" class="arrow next">
+    </div>
+</main>
+<footer>
+    <script>
+        fetch("/footer/index.html")
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector("footer").innerHTML = data;
+                document.querySelector("footer").style.backgroundImage = 'linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)), url("/src/img/foot.png")';
+            });
+    </script>
+</footer>
+<script src="/scripts/details.js"></script>
+<script src="/scripts/hamMenu.js"></script>
+<script src="/scripts/footer.js"></script>
+</body>
+</html>

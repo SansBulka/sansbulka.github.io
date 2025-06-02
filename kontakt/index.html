@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="A simple HTML document">
+    <meta name="keywords" content="nusz">
+    <meta name="author" content="Kamil Pogonowski">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/src/ico/icon.png" type="image/png">
+    <title>Sekiryu profesjonalne japońskie noże kuchenne</title>
+</head>
+<body>
+<nav>
+    <script>
+        fetch("/navbar/index.html")
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector("nav").innerHTML = data;
+                if (window.initHamburgerMenu) window.initHamburgerMenu();
+            });
+    </script>
+</nav>
+<main>
+    <div class="links">
+        <a class="gray" href="/">Strona główna</a><p> > </p><a href="/aktualnosci">Kontakt</a>
+    </div>
+    <section>
+        <h3>kontakt</h3>
+        <p class="yapping">Firma OMC jest dystrybutorem produktów marki MASAHIRO w Polsce. <br>
+            Zapraszamy do współpracy odbiorców hurtowych, sklepy z nożami, kucharzy, restauratorów, hotelarzy, blogerów, dekoratorów wnętrz i projektantów.
+        </p>
+        <div class="fleksik">
+            <img class="sekiryu" src="/src/img/sekiryu.svg" alt="sekiryu">
+            <div class="local">
+                <img src="/src/ico/pin.svg" alt="pinezka">
+                <p><span class="yo">Sekiryu International</span><br>1 rue Rohan 67790 STEINBOURG, France</p>
+            </div>
+            <div class="local">
+                <img src="/src/ico/pin.svg" alt="pinezka">
+                <p><span class="yo">Napisz do nas</span><br>meilleur@couteau.info</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h3>Formularz kontaktowy</h3>
+        <form>
+            <div class="info">
+                <label for="name">Imię i nazwisko<input type="text" id="name" name="name" placeholder="Imię i nazwisko" required></label>
+                <label for="email">Email<input type="email" id="email" name="email" placeholder="Adres e-mail" required></label>
+                <label for="telephone">Numer telefonu<input type="text" id="telephone" name="telephone" placeholder="Numer telefonu" required></label>
+            </div>
+            <label for="message" class="message">Wiadomość<textarea id="message" placeholder="Wiadomość"></textarea></label>
+            <div class="prove">
+                <p class="fat">Udowodnij, że nie jesteś robotem</p>
+                <div class="szyt">
+                    <div class="captcha">
+                        <canvas class="canvas"></canvas>
+                        <div class="retry" onclick="generateCaptcha()"><img src="/src/ico/retry.svg" alt="sprobuj ponowenie"></div>
+                    </div>
+                    <label>
+                        <input type="text">
+                    </label>
+                </div>
+            </div>
+
+            <p>Aenean accumsan magna id dapibus vehicula. Sed viverra mi posuere auctor porttitor. Nullam lectus mauris, tincidunt semper efficitur eu, ullamcorper ac dui. Duis lobortis vitae felis sed interdum. Donec ut blandit mi. Donec sagittis purus at nulla dapibus, vitae ultricies ligula dapibus. Pellentesque lobortis nisl at nibh imperdiet, vitae porttitor turpis malesuada. Pellentesque commodo justo a justo ultricies maximus.</p>
+            <label for="cibab">
+                <input type="checkbox" id="cibab" required>
+            </label>
+            <button type="submit">Wyślij wiadomość</button>
+        </form>
+    </section>
+
+
+
+
+</main>
+<footer>
+    <script>
+        fetch("/footer/index.html")
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector("footer").innerHTML = data;
+                document.querySelector("footer").style.backgroundImage = 'linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)), url("/src/img/foot.png")';
+            });
+    </script>
+</footer>
+<script src="/scripts/captcha.js"></script>
+<script src="/scripts/details.js"></script>
+<script src="/scripts/hamMenu.js"></script>
+<script src="/scripts/footer.js"></script>
+</body>
+</html>

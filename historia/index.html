@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="A simple HTML document">
+    <meta name="keywords" content="nusz">
+    <meta name="author" content="Kamil Pogonowski">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/src/ico/icon.png" type="image/png">
+    <title>Sekiryu profesjonalne japońskie noże kuchenne</title>
+</head>
+<body>
+<nav>
+    <script>
+        fetch("/navbar/index.html")
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector("nav").innerHTML = data;
+                if (window.initHamburgerMenu) window.initHamburgerMenu();
+            });
+    </script>
+</nav>
+<main>
+    <img class="bg" src="/src/img/back.webp" alt="tło">
+    <div class="links">
+        <a class="gray" href="/">Strona główna</a><p> > </p><a href="/historia">Historia</a>
+    </div>
+    <section class="historia">
+        <h3>Historia</h3>
+        <article>
+            <img src="/src/img/sybau.webp" alt="smok">
+            <div>
+                <h4>Tradition and innovation</h4>
+                <p>Since the 1990s, Haiku has conquered the European market with its Japanese knives with wooden handles, mixing Japanese and Western shapes. Made in a small family-run factory for over a century, these knives combine tradition and modernity, thanks to a complex alchemy of materials and ancestral know-how. Haiku knives offer convenience, perfect balance and a pleasant grip, thanks to a handle assembly inspired by katanas, and an easy-to-clean edge.</p>
+            </div>
+        </article>
+        <article>
+            <div>
+                <h4>Tradition and innovation</h4>
+                <p>Since the 1990s, Haiku has conquered the European market with its Japanese knives with wooden handles, mixing Japanese and Western shapes. Made in a small family-run factory for over a century, these knives combine tradition and modernity, thanks to a complex alchemy of materials and ancestral know-how. Haiku knives offer convenience, perfect balance and a pleasant grip, thanks to a handle assembly inspired by katanas, and an easy-to-clean edge.</p>
+            </div>
+            <img src="/src/img/nusz.webp" alt="smok">
+        </article>
+    </section>
+    <section class="obrazy">
+        <div class="obraz1"><img src="/src/img/2x4/1.png" alt="obraz 1"><div class="ontop"><p>ジ</p></div></div>
+        <div class="obraz2"><img src="/src/img/2x4/2.png" alt="obraz 2"><div class="ontop"><p>ョ</p></div></div>
+        <div class="obraz3"><img src="/src/img/2x4/3.png" alt="obraz 3"><div class="ontop"><p>の</p></div></div>
+        <div class="obraz4"><img src="/src/img/2x4/4.png" alt="obraz 4"><div class="ontop"><p>奇</p></div></div>
+        <div class="obraz5"><img src="/src/img/2x4/5.png" alt="obraz 5"><div class="ontop"><p>妙</p></div></div>
+        <div class="obraz6"><img src="/src/img/2x4/6.png" alt="obraz 6"><div class="ontop"><p>な</p></div></div>
+        <div class="obraz7"><img src="/src/img/2x4/7.png" alt="obraz 7"><div class="ontop"><p>冒</p></div></div>
+        <div class="obraz8"><img src="/src/img/2x4/8.png" alt="obraz 8"><div class="ontop"><p>険</p></div></div>
+    </section>
+</main>
+<footer>
+    <script>
+        fetch("/footer/index.html")
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector("footer").innerHTML = data;
+                document.querySelector("footer").style.backgroundImage = 'linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)), url("/src/img/foot.png")';
+            });
+    </script>
+</footer>
+<div id="lightbox" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); justify-content:center; align-items:center;">
+    <img id="lightbox-img" src="" alt="powiększony obraz" style="max-width:90vw; max-height:90vh; box-shadow:0 0 20px #000;">
+</div>
+<script src="/scripts/details.js"></script>
+<script src="/scripts/hamMenu.js"></script>
+<script src="/scripts/footer.js"></script>
+<script>
+    document.querySelectorAll('.obrazy div img').forEach(img => {
+        img.addEventListener('click', function(e) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = this.src;
+            lightbox.style.display = 'flex';
+        });
+    });
+    document.getElementById('lightbox').addEventListener('click', function() {
+        this.style.display = 'none';
+    });
+</script>
+</body>
+</html>

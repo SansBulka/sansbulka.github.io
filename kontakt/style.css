@@ -1,0 +1,278 @@
+@import url(/footer/style.css);
+
+@import url(/navbar/style.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins,poppins,sans-serif;
+    font-weight: 300
+}
+
+.links,body {
+    width: 100vw
+}
+
+main h3 {
+    color: #000;
+    font-size: clamp(1.5rem,3vw,2rem);
+    text-transform: uppercase;
+    letter-spacing: 6px
+}
+
+h4 {
+    font-size: clamp(1rem,.8vw,2.5rem);
+    font-weight: 600
+}
+
+.links {
+    display: flex;
+    height: 13vh;
+    align-items: flex-end;
+    margin-left: 10%;
+    justify-content: flex-start
+}
+
+.links>a {
+    text-decoration: none;
+    color: #000;
+    font-size: .8rem;
+    margin: 0 1%
+}
+
+nav {
+    background-color: #000
+}
+
+.yapping {
+    text-align: center;
+    font-size: 16px
+}
+
+.fleksik,section {
+    display: flex;
+    align-items: center
+}
+
+.fleksik {
+    margin: 5vh 0
+}
+
+.sekiryu {
+    width: 20vw;
+    margin-right: 5vw
+}
+
+.adres {
+    width: 40vw
+}
+
+label,section {
+    flex-direction: column
+}
+
+.info,label {
+    display: flex
+}
+
+.yo {
+    font-weight: 700
+}
+
+.local {
+    display: flex
+}
+
+.local>img,input {
+    width: 42px;
+    height: 48px;
+    margin: 0 48px
+}
+
+input {
+    width: 250px;
+    border: 1px solid #c5c5c5;
+    border-radius: 12px;
+    margin: 0 8px;
+    position: relative;
+    padding: 0 12px
+}
+
+input::placeholder,textarea::placeholder {
+    font-size: 14px;
+    color: #000
+}
+
+.fat,label {
+    font-weight: 700;
+    margin-bottom: 8px
+}
+
+form {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px
+}
+
+textarea {
+    box-sizing: border-box;
+    width: 100%;
+    height: 120px;
+    padding: 12px;
+    resize: none
+}
+
+.message {
+    width: 98%
+}
+
+.captcha,textarea {
+    border-radius: 12px;
+    border: 1px solid #c5c5c5
+}
+
+.captcha {
+    height: 48px;
+    display: flex;
+    width: 250px
+}
+
+.canvas,.retry {
+    width: 80%;
+    height: 100%
+}
+
+.retry {
+    border-left: 1px solid #c5c5c5;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.retry>img {
+    width: 50%;
+    height: 50%
+}
+
+.prove {
+    flex-direction: column;
+    width: 98%;
+    margin: 16px 0
+}
+
+.prove,.szyt {
+    display: flex
+}
+
+input:focus {
+    outline: 0;
+    border: 2px solid #c5c5c5;
+    background-color: transparent
+}
+
+input[type=checkbox] {
+    border: 1px solid #c5c5c5;
+    width: 20px;
+    height: 20px;
+    margin: 0 16px;
+    accent-color: transparent
+}
+
+input[type=checkbox]:checked {
+    background-color: transparent;
+    color: #000;
+    accent-color: transparent;
+    border: 2px solid #c5c5c5
+}
+
+label[for=cibab] {
+    flex-direction: row
+}
+
+button[type=submit] {
+    border: 0;
+    background-color: #000;
+    color: #fff;
+    border-radius: 8px;
+    padding: 8px 24px;
+    font-weight: 500;
+    margin: 5vh 0
+}
+
+@media (max-width:768px) {
+    .fleksik {
+        flex-direction: column;
+        align-items: center
+    }
+
+    .sekiryu {
+        margin-right: 0
+    }
+
+    .adres,.sekiryu {
+        width: 100%
+    }
+
+    form {
+        width: 90%
+    }
+
+    .links {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0
+    }
+
+    .info>label,.info>label>input,.local {
+        width: 100%
+    }
+
+    .sekiryu {
+        display: none
+    }
+
+    .info,.szyt {
+        flex-direction: column;
+        align-items: center;
+        width: 100%
+    }
+
+    .szyt {
+        display: flex;
+        gap: 16px;
+        margin: 16px 0
+    }
+
+    input[type=checkbox] {
+        width: 32px;
+        height: 32px
+    }
+
+    textarea {
+        height: 400px
+    }
+    html, body {
+        overflow-x: hidden !important;
+        width: 100vw;
+    }
+
+    .container, main, .lewa, .prawa, .links {
+        max-width: 100vw;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+    section>h3{
+        text-align: center;
+    }
+}
+
+section h3 {
+    margin: 16px 0 32px
+}
+.links>p{
+    height: 22px;
+}

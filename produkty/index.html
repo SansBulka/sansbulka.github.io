@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="A simple HTML document">
+    <meta name="keywords" content="nusz">
+    <meta name="author" content="Kamil Pogonowski">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/src/ico/icon.png" type="image/png">
+    <title>Sekiryu profesjonalne japońskie noże kuchenne</title>
+</head>
+<body>
+<nav>
+    <script>
+        fetch("/navbar/index.html")
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector("nav").innerHTML = data;
+                if (window.initHamburgerMenu) window.initHamburgerMenu();
+            });
+    </script>
+</nav>
+<div class="links">
+    <a class="gray" href="/">Strona główna</a><p> > </p><a href="/produkty">Produkty</a>
+</div>
+<main>
+    <div class="filtry">
+
+        <article class="types">
+            <h3>Kategorie</h3>
+            <label><a href="#">Blue Carbon ブルーカーボン</a></label>
+            <label><a href="#">Kurouchi 黒内</a></label>
+            <label><a href="#">Ryoma Sakamoto 坂本龍馬</a></label>
+            <label><a href="#">original オリジナル</a></label>
+            <label><a href="#">home 家</a></label>
+            <label><a href="#">yakitori 焼き鳥</a></label>
+        </article>
+
+        <article class="checkbox">
+            <h3>Grupa</h3>
+            <label><input type="checkbox"> Seria MV-H</label>
+            <label><input type="checkbox"> Seria MV</label>
+            <label><input type="checkbox"> Seria BWH</label>
+            <label><input type="checkbox"> seria bassen</label>
+            <label><input type="checkbox"> Kamienie i akcesoria</label>
+            <label><input type="checkbox"> Seria MSC</label>
+        </article>
+
+        <article class="checkbox">
+            <h3>Długość</h3>
+            <label><input type="checkbox" checked> 6–11 cm</label>
+            <label><input type="checkbox"> 12–15 cm</label>
+            <label><input type="checkbox"> 16-19 cm</label>
+            <label><input type="checkbox"> 20-24 cm</label>
+            <label><input type="checkbox"> 27 cm+</label>
+        </article>
+
+        <article class="price">
+            <h3>Cena</h3>
+            <div>
+                <label>
+                    <input type="text" placeholder="0">
+                    <span>zł</span><span class="dash"> - </span>
+                </label>
+                <label>
+                    <input type="text" placeholder="5000">
+                </label>
+            </div><br>
+            <button>filtruj produkty</button>
+        </article>
+    </div>
+
+    <div>
+        <article class="yogurt">
+            <h3>Kurouchi</h3>
+            <img src="/src/img/gurt.webp" alt="sans">
+        </article>
+        <div class="sort">
+            <p>Lorem ipsum dolor sit amet consectetur. Nisi sit ullamcorper adipiscing vulputate tincidunt condimentum id lacus fringilla. Justo blandit pellentesque leo enim. Sapien dolor nec bibendum maecenas quis mauris. Sed enim et vulputate malesuada placerat. Enim ullamcorper lorem turpis mattis nisi sollicitudin eget dui. Id euismod eget ipsum ornare orci dictumst mattis libero.</p>
+            <label>
+                <select>
+                    <option>Cena rosnąco</option>
+                    <option>Cena malejąco</option>
+                </select>
+            </label>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="/src/img/nysz.webp" alt="Nóż">
+                <div class="product-title">Przykładowa nazwa noża<br>165 mm (10507)</div>
+                <br>
+                <div class="og-price"><p>1049,00 zł</p><img src="/src/ico/i.svg" alt="nusz"></div>
+                <div class="price"><p>949,00 zł</p></div>
+                <a href="/item" class="btn">zobacz więcej</a>
+            </div>
+            <div class="product-card">
+                <img src="/src/img/nysz.webp" alt="Nóż">
+                <div class="product-title">Przykładowa nazwa noża<br>165 mm (10507)</div>
+                <br>
+                <div class="og-price"><p>1049,00 zł</p><img src="/src/ico/i.svg" alt="nusz"></div>
+                <div class="price"><p>949,00 zł</p></div>
+                <a href="/item" class="btn">zobacz więcej</a>
+            </div>
+            <div class="product-card">
+                <img src="/src/img/nysz.webp" alt="Nóż">
+                <div class="product-title">Przykładowa nazwa noża<br>165 mm (10507)</div>
+                <br>
+                <div class="og-price"><p>1049,00 zł</p><img src="/src/ico/i.svg" alt="nusz"></div>
+                <div class="price"><p>949,00 zł</p></div>
+                <a href="/item" class="btn">zobacz więcej</a>
+            </div>
+            <div class="product-card">
+                <img src="/src/img/nysz.webp" alt="Nóż">
+                <div class="product-title">Przykładowa nazwa noża<br>165 mm (10507)</div>
+                <br>
+                <div class="og-price"><p>1049,00 zł</p><img src="/src/ico/i.svg" alt="nusz"></div>
+                <div class="price"><p>949,00 zł</p></div>
+                <a href="/item" class="btn">zobacz więcej</a>
+            </div>
+            <div class="product-card">
+                <img src="/src/img/nysz.webp" alt="Nóż">
+                <div class="product-title">Przykładowa nazwa noża<br>165 mm (10507)</div>
+                <br>
+                <div class="og-price"><p>1049,00 zł</p><img src="/src/ico/i.svg" alt="nusz"></div>
+                <div class="price"><p>949,00 zł</p></div>
+                <a href="/item" class="btn">zobacz więcej</a>
+            </div>
+            <div class="product-card">
+                <img src="/src/img/nysz.webp" alt="Nóż">
+                <div class="product-title">Przykładowa nazwa noża<br>165 mm (10507)</div>
+                <br>
+                <div class="og-price"><p>1049,00 zł</p><img src="/src/ico/i.svg" alt="nusz"></div>
+                <div class="price"><p>949,00 zł</p></div>
+                <a href="/item" class="btn">zobacz więcej</a>
+            </div>
+            <div class="product-card">
+                <img src="/src/img/nysz.webp" alt="Nóż">
+                <div class="product-title">Przykładowa nazwa noża<br>165 mm (10507)</div>
+                <br>
+                <div class="og-price"><p>1049,00 zł</p><img src="/src/ico/i.svg" alt="nusz"></div>
+                <div class="price"><p>949,00 zł</p></div>
+                <a href="/item" class="btn">zobacz więcej</a>
+            </div>
+            <div class="product-card">
+                <img src="/src/img/nysz.webp" alt="Nóż">
+                <div class="product-title">Przykładowa nazwa noża<br>165 mm (10507)</div>
+                <br>
+                <div class="og-price"><p>1049,00 zł</p><img src="/src/ico/i.svg" alt="nusz"></div>
+                <div class="price"><p>949,00 zł</p></div>
+                <a href="/item" class="btn">zobacz więcej</a>
+            </div>
+            <div class="product-card">
+                <img src="/src/img/nysz.webp" alt="Nóż">
+                <div class="product-title">Przykładowa nazwa noża<br>165 mm (10507)</div>
+                <br>
+                <div class="og-price"><p>1049,00 zł</p><img src="/src/ico/i.svg" alt="nusz"></div>
+                <div class="price"><p>949,00 zł</p></div>
+                <a href="/item" class="btn">zobacz więcej</a>
+            </div>
+            <div class="product-card">
+                <img src="/src/img/nysz.webp" alt="Nóż">
+                <div class="product-title">Przykładowa nazwa noża<br>165 mm (10507)</div>
+                <br>
+                <div class="og-price"><p>1049,00 zł</p><img src="/src/ico/i.svg" alt="nusz"></div>
+                <div class="price"><p>949,00 zł</p></div>
+                <a href="/item" class="btn">zobacz więcej</a>
+            </div>
+            <div class="product-card">
+                <img src="/src/img/nysz.webp" alt="Nóż">
+                <div class="product-title">Przykładowa nazwa noża<br>165 mm (10507)</div>
+                <br>
+                <div class="og-price"><p>1049,00 zł</p><img src="/src/ico/i.svg" alt="nusz"></div>
+                <div class="price"><p>949,00 zł</p></div>
+                <a href="/item" class="btn">zobacz więcej</a>
+            </div>
+            <div class="product-card">
+                <img src="/src/img/nysz.webp" alt="Nóż">
+                <div class="product-title">Przykładowa nazwa noża<br>165 mm (10507)</div>
+                <br>
+                <div class="og-price"><p>1049,00 zł</p><img src="/src/ico/i.svg" alt="nusz"></div>
+                <div class="price"><p>949,00 zł</p></div>
+                <a href="/item" class="btn">zobacz więcej</a>
+            </div>
+        </div>
+        <div class="pagination">
+            <img src="/src/ico/arrow.svg" alt="poprzednia" class="arrow prev">
+            <span>01</span>
+            <span>02</span>
+            <span class="current">03</span>
+            <span>04</span>
+            <span>05</span>
+            <span>...</span>
+            <span>10</span>
+            <span>11</span>
+            <span>12</span>
+            <span>13</span>
+            <img src="/src/ico/arrow.svg" alt="następna" class="arrow next">
+        </div>
+    </div>
+
+
+</main>
+
+<footer>
+    <script>
+        fetch("/footer/index.html")
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector("footer").innerHTML = data;
+                document.querySelector("footer").style.backgroundImage = 'linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8)), url("/src/img/foot.webp")';
+            });
+    </script>
+</footer>
+<script src="/scripts/details.js"></script>
+<script src="/scripts/hamMenu.js"></script>
+<script src="/scripts/footer.js"></script>
+<script src="/scripts/filterDropDown.js"></script>
+</body>
+</html>

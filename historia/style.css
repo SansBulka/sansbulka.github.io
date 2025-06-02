@@ -1,0 +1,183 @@
+@import url(/footer/style.css);
+
+@import url(/navbar/style.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins,poppins,sans-serif;
+    font-weight: 300
+}
+
+.links,body {
+    width: 100vw
+}
+
+nav {
+    background-color: #000
+}
+
+h3 {
+    color: #000;
+    font-size: clamp(1.5rem,3vw,2rem);
+    text-transform: uppercase
+}
+
+h4 {
+    font-size: clamp(1rem,1.5vw,2.5rem);
+    font-weight: 600
+}
+
+.links {
+    display: flex;
+    height: 13vh;
+    align-items: flex-end;
+    margin-left: 10%
+}
+
+.links>a {
+    text-decoration: none;
+    color: #000;
+    font-size: .8rem;
+    margin: 0 1%
+}
+
+a.gray {
+    color: #858585
+}
+
+.historia>article>img {
+    width: 45%
+}
+
+.historia,.historia>article {
+    display: flex;
+    width: 90vw;
+    justify-content: space-evenly;
+    align-items: center
+}
+
+.historia {
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center
+}
+
+.historia>article>div {
+    width: 25vw
+}
+
+.bg {
+    width: 100vw;
+    position: absolute;
+    top: 25vh;
+    z-index: -1
+}
+
+.obrazy,.ontop,main {
+    display: flex;
+    justify-content: center
+}
+
+.obrazy {
+    width: 90vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 64px
+}
+
+.obrazy>div,.obrazy>div>img {
+    width: 20vw;
+    height: 20vw
+}
+
+.obrazy>div {
+    margin: 4px 8px;
+    position: relative;
+    overflow: hidden
+}
+
+.ontop,main {
+    align-items: center
+}
+
+main {
+    flex-direction: column
+}
+
+.ontop {
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    font-size: 128px;
+    color: #fff;
+    background-color: rgba(0,0,0,.5);
+    opacity: 0;
+    transform: scale(.9);
+    transition: opacity .3s ease,transform .3s ease;
+    will-change: opacity,transform
+}
+
+.obrazy>div:hover .ontop {
+    opacity: 1;
+    transform: scale(1)
+}
+
+.hist>a {
+    color: #d71119;
+    font-weight: 700
+}
+
+@media (max-width:768px) {
+    .historia>article {
+        flex-direction: column;
+        margin-bottom: 32px
+    }
+
+    .historia>article>img {
+        width: 90%
+    }
+
+    .historia>article>div {
+        width: 90%;
+        text-align: center
+    }
+
+    .obrazy {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%
+    }
+
+    .obrazy>div {
+        width: 90vw;
+        height: 90vw
+    }
+
+    .obrazy>div>img {
+        width: 100%;
+        height: 100%
+    }
+    html, body {
+        overflow-x: hidden !important;
+        width: 100vw;
+    }
+
+    .container, main, .lewa, .prawa, .links {
+        max-width: 100vw;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+}
+.links>p{
+    height: 22px;
+}
+.ontop {
+    pointer-events: none;
+}

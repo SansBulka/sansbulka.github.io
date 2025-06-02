@@ -1,0 +1,409 @@
+@import url(/footer/style.css);
+
+@import url(/navbar/style.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins,poppins,sans-serif;
+    font-weight: 300
+}
+
+body {
+    width: 100vw
+}
+
+.baner {
+    background-image: linear-gradient(to bottom,#000,transparent),url("/src/img/baner.webp");
+    width: 100%;
+    height: 100vh;
+    background-size: cover
+}
+
+.banerText,.znaczki {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}
+
+.znaczki img {
+    width: 72px;
+    height: 72px;
+    margin: 0 10px
+}
+
+.banerText {
+    width: 100vw;
+    text-align: center;
+    top: 50%;
+    color: #fff;
+    font-size: clamp(2rem,5vw,2.5rem);
+    z-index: 10;
+    text-transform: uppercase;
+    letter-spacing: 12px
+}
+
+.goon:nth-of-type(1) {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer
+}
+
+.goon:hover {
+    filter: brightness(0) saturate(100%) invert(23%) sepia(69%) saturate(6215%) hue-rotate(348deg) brightness(82%) contrast(106%)
+}
+
+.goon:nth-of-type(2) {
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    transform: translate(-50%,-50%)
+}
+
+.goon:nth-of-type(3) {
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    transform: translate(-50%,-50%) rotate(-180deg)
+}
+
+.more,.rights {
+    color: #fff;
+    position: absolute
+}
+
+.more {
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 10px 30px;
+    text-decoration: none;
+}
+
+.rights {
+    font-size: clamp(2rem,6vw,4rem);
+    font-weight: 100;
+    top: -30%;
+    right: -10%
+}
+
+h3 {
+    color: #000;
+    font-size: clamp(1.5rem,3vw,2rem);
+    text-transform: uppercase
+}
+
+.carbon,.product {
+    background-size: cover
+}
+
+.product {
+    width: 25vw;
+    height: 30vw;
+    margin: 8px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.carbon    { background-image: url(/src/img/blue_carbon.webp); }
+.kurouchi  { background-image: url(/src/img/kurokuchi.webp); }
+.original,
+.ryoma_sakamoto { background-image: url(/src/img/ryoma_sakamoto.webp); }
+.home      { background-image: url(/src/img/home.webp); }
+.yakitori  { background-image: url(/src/img/yakitori.webp); }
+
+.product::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #000;
+    opacity: 0.45; /* reguluj poziom przyciemnienia */
+    pointer-events: none;
+    z-index: 1;
+}
+
+.name {
+    color: #fff;
+    font-size: clamp(1rem,2vw,1.5rem);
+    text-align: center;
+    margin-top: 10px;
+    letter-spacing: 4px;
+    position: absolute;
+    top: 80%;
+    left: 10%
+}
+
+.products {
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    flex-wrap: wrap
+}
+
+.items {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column
+}
+
+.szlup {
+    margin: 48px
+}
+
+.hiniolskie {
+    font-family: "Noto Serif JP",serif;
+    color: #fff;
+    font-size: clamp(.8rem,1.2vw,1rem);
+    text-align: center;
+    margin-top: 1em;
+    letter-spacing: 4px;
+    position: absolute;
+    top: 85%;
+    left: 10%
+}
+
+.description {
+    margin-top: 32px;
+    color: #fff;
+    font-size: clamp(.75rem,1.1vw,.9rem);
+    line-height: 2.5
+}
+
+.redButt,.sybau>div>button {
+    font-size: clamp(.5rem,.8vw,.7rem)
+}
+
+.redButt {
+    position: absolute;
+    bottom: 10%;
+    left: 10%
+}
+
+.detailHiniolskie,.detailName {
+    color: #fff;
+    text-align: left;
+    letter-spacing: .2em
+}
+
+.detailName {
+    font-size: clamp(1rem,1.5vw,1.2rem);
+    margin-top: 1em
+}
+
+.detailHiniolskie {
+    font-family: "Noto Serif JP",serif;
+    font-size: clamp(.8rem,1.2vw,1rem)
+}
+
+.details {
+    padding: 1.5em;
+    height: 100%;
+    background-color: rgba(0,0,0,.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(120px);
+    opacity: 0;
+    transition: transform .3s ease,opacity .3s ease
+}
+
+.sybau {
+    justify-items: center
+}
+
+.sybau>img {
+    width: 40vw
+}
+
+.sybau>div {
+    margin: 16px
+}
+
+h4 {
+    font-size: clamp(1rem,1.5vw,2.5rem);
+    font-weight: 600
+}
+
+.historia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 64px
+}
+
+.sybau>div>button {
+    background-color: #c5c5c5;
+    border: 0;
+    padding: 1em 2em;
+    border-radius: .5em;
+    margin-top: 2em
+}
+
+.sybau>div>button:hover {
+    background-color: #d71119;
+    color: #fff;
+    cursor: pointer
+}
+
+.main>a,.main>h3 {
+    color: #d71119;
+    font-weight: 800
+}
+
+@media (max-width:768px) {
+    .product {
+        width: 80vw;
+        height: 60vw
+    }
+
+    .znaczki img {
+        width: 50px;
+        height: 50px
+    }
+
+    .banerText {
+        font-size: clamp(1.5rem,4vw,2rem)
+    }
+
+    .more {
+        padding: 5px 20px;
+        font-size: clamp(.5rem,1vw,.7rem)
+    }
+
+    .baner {
+        display: none
+    }
+
+    nav {
+        background-color: #000
+    }
+
+    .sybau {
+        flex-wrap: wrap
+    }
+
+    .sybau>img {
+        width: 100%
+    }
+
+    .sybau>div {
+        width: 90%;
+        margin: auto
+    }
+
+    .sybau>div>button {
+        width: 100%;
+        height: 64px;
+        font-size: 16px
+    }
+
+    .searchBar {
+        margin-left: 12px
+    }
+}
+
+.redButt,.sybau>div>a {
+    text-decoration: none;
+    display: inline-block
+}
+
+.redButt {
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: .9rem;
+    padding: 10px 15px;
+    text-align: center;
+    transition: background-color .3s
+}
+
+.redButt:hover {
+    background-color: #b60e15
+}
+
+.sybau>div>a {
+    color: #000;
+    font-size: 14px;
+    background-color: #c5c5c5;
+    padding: 1em 2em;
+    border-radius: .5em;
+    margin-top: 1em
+}
+
+.more:hover,.redButt,.sybau>div>a:hover {
+    background-color: #d71119;
+    color: #fff
+}
+
+@media (max-width:1280px) {
+    .description {
+        display: none
+    }
+}
+
+.main>a {
+    font-weight: 600
+}
+
+.sybau>img {
+    max-width: 40vw;
+    height: auto;
+    object-fit: contain;
+    align-self: center
+}
+
+.sybau>div {
+    width: 30vw;
+    padding: 16px 0
+}
+
+@media (max-width:768px) {
+    .sybau {
+        align-items: center;
+        gap: 20px;
+        justify-content: center
+    }
+
+    .sybau>img {
+        width: 90%;
+        max-width: none
+    }
+
+    .sybau>div {
+        width: 90%;
+        padding: 0
+    }
+
+    .szlup {
+        margin-top: 10vh
+    }
+}
+
+.sybau {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 90%;
+    margin: 0 auto
+}
+
+.more:hover {
+    cursor: pointer;
+    border: 0
+}
+.description{
+    font-size: clamp(.75rem,0.8vw,.9rem);
+    line-height: 2;
+}
